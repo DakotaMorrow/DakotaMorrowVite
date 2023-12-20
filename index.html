@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dakota Morrow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="./fontawesome/js/brands.js"></script>
+    <script defer src="./fontawesome/js/duotone.js"></script>
+    <script defer src="./fontawesome/js/light.js"></script>
+    <script defer src="./fontawesome/js/regular.js"></script>
+    <script defer src="./fontawesome/js/sharp-regular.js"></script>
+    <script defer src="./fontawesome/js/sharp-solid.js"></script>
+    <script defer src="./fontawesome/js/solid.js"></script>
+    <script defer src="./fontawesome/js/thin.js"></script>
+
+    <!-- Keep the FontAwesome file below. -->
+
+    <script defer src="./fontawesome/js/fontawesome.js"></script>
+
+    <style>
+      :root {
+        --primary-color: rgba(255, 255, 255, 0.8);
+        --fullHeight: calc(var(--vh, 1vh) * 100);
+        --fullWidth: calc(var(--vw, 1vw) * 100);
+      }
+
+      @font-face {
+        font-family: "HelveticaBlack";
+        src: url("fonts/HelveticaNeue//HelveticaNeueLTStd-Blk.otf")
+          format("opentype");
+      }
+
+      @font-face {
+        font-family: "HelveticaRoman";
+        src: url("fonts/HelveticaNeue/HelveticaNeueLTStd-Roman.otf")
+          format("opentype");
+      }
+      @font-face {
+        font-family: "Avenir";
+        src: url(fonts/Avenir/AvenirLTStd-Roman.otf) format("opentype");
+      }
+
+      body {
+        margin: 0%;
+        padding: 0%;
+        font-family: Avenir, Arial, Helvetica, sans-serif;
+        /* overflow-x: hidden; */
+      }
+
+      .containerIndex {
+        height: var(--fullHeight);
+        width: var(--fullWidth);
+        display: grid;
+        grid-template-rows: 30% 40% 30%;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        background-image: url("img/woodwalk.jpg");
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .title {
+        font-size: 8vw;
+        font-family: Avenir;
+        font-weight: 900;
+        justify-items: center;
+        color: var(--primary-color);
+      }
+
+      .phone {
+        font-size: 2.4vw;
+        font-weight: 500;
+        color: var(--primary-color);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        align-self: end;
+        justify-self: start;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .email {
+        font-size: 2.4vw;
+        font-weight: 500;
+        color: var(--primary-color);
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        align-self: end;
+        justify-self: end;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        font-size: 3.2vw;
+        font-weight: 400;
+        color: var(--primary-color);
+        margin-top: -2vw;
+      }
+
+      .main {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        justify-items: center;
+      }
+
+      .containerPortfolio {
+        width: var(--fullWidth);
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .aboutInfo {
+        width: clamp(300px, 80vw, 1080px);
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: 40px 1fr;
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
+        line-height: 150%;
+        margin-top: 70px;
+      }
+
+      .portfolioWebPages {
+        width: clamp(600px, 80vw, 1920px);
+        display: flex;
+        gap: 70px;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 70px;
+      }
+
+      .portfolioWebPage {
+        width: 600px;
+        height: 335px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 5px 3px 11px rgba(0, 0, 0, 0.3);
+        transition: transform 250ms ease-in-out 0ms,
+          height 250ms ease-in-out 0ms;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+        background-blend-mode: multiply;
+      }
+
+      .portfolioWebPage:hover {
+        transform: translateY(-5px) scale(1.1);
+      }
+
+      .desktopLandingPage {
+        display: grid;
+      }
+
+      .mobileLandingPage {
+        display: none;
+      }
+      .printingPortfolio {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        background-color: aqua;
+      }
+      .printingInfo {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: avenir;
+        font-size: 60px;
+        font-weight: 400;
+      }
+
+      @media screen and (max-width: 600px) {
+        .containerIndex {
+          background-image: url("img/woodwalkMobile.jpg");
+          display: grid;
+          grid-template-rows: 30% 40% 30%;
+          grid-template-columns: 1fr;
+        }
+        .containerPortfolio {
+          width: var(--fullWidth);
+          display: grid;
+          align-items: center;
+          justify-items: center;
+        }
+        .portfolioWebPages {
+          width: 90%;
+          display: flex;
+          gap: 70px;
+          align-content: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          /* margin-top: 200px; */
+          background-color: rgba(0, 0, 0, 0);
+          background-blend-mode: multiply;
+        }
+        .portfolioWebPage {
+          width: 90vw;
+          height: 45vw;
+          background-position: center;
+          background-size: cover;
+          box-shadow: 5px 3px 11px rgba(0, 0, 0, 0.3);
+          transition: transform 250ms ease-in-out 0ms,
+            height 250ms ease-in-out 0ms;
+          position: relative;
+          background-color: rgba(0, 0, 0, 0);
+          background-blend-mode: multiply;
+        }
+        .main {
+          grid-column: 1;
+          grid-row: 2;
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: 100%;
+          justify-items: center;
+          align-self: start;
+        }
+        .title {
+          font-size: 12vw;
+          font-weight: 900;
+          justify-items: center;
+          color: var(--primary-color);
+        }
+        .description {
+          font-size: 6vw;
+          font-weight: 500;
+          color: var(--primary-color);
+          margin-top: -2vw;
+        }
+        .phoneMobile {
+          font-size: 6vw;
+          font-weight: 500;
+          color: var(--primary-color);
+          margin-left: 0px;
+          margin-bottom: 0px;
+          width: 100%;
+          text-align: center;
+        }
+        .emailMobile {
+          font-size: 6vw;
+          font-weight: 500;
+          color: var(--primary-color);
+          margin-right: 0px;
+          margin-bottom: 0px;
+          width: 100%;
+          text-align: center;
+        }
+        .phoneEmailBlock {
+          font-size: 6vw;
+          font-weight: 500;
+          color: var(--primary-color);
+          width: 100%;
+          grid-column: 1;
+          grid-row: 3;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .desktopLandingPage {
+          display: none;
+        }
+        .mobileLandingPage {
+          display: grid;
+        }
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      .infoBox {
+        font-size: 100px;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="containerIndex desktopLandingPage">
+      <div class="main">
+        <div class="title">Dakota Morrow</div>
+        <div class="description">Immersive Web Design</div>
+      </div>
+
+      <div class="phone desktop">509.730.3716</div>
+      <div class="email desktop">sales@dakotamorrow.com</div>
+    </div>
+
+    <div class="containerIndex mobileLandingPage">
+      <div class="main">
+        <div class="title">Dakota Morrow</div>
+        <div class="description">Immersive Web Design</div>
+      </div>
+      <div class="phoneEmailBlock">
+        <div class="phoneMobile">509.730.3716</div>
+        <div class="emailMobile">sales@dakotamorrow.com</div>
+      </div>
+    </div>
+
+    <!-- <div class="printingPortfolio">
+      <div class="printingInfo">Business Cards</div>
+      <div class="printingInfo">Banners</div>
+      <div class="printingInfo">Pamphlets</div>
+      <div class="printingInfo"></div>
+      <div class="printingInfo"></div>
+    </div> -->
+
+    <div class="containerPortfolio">
+      <div class="aboutInfo">
+        <i class="fa-light" style="margin-top: 6px; font-size: 30px"
+          >&#xf30f;</i
+        >
+        <div>
+          <div>
+            Our web design business offers a range of professional web design
+            services that prioritize creating immersive and visually appealing
+            websites for clients. Our team is skilled in using clean typography,
+            abundant white space, and high-quality graphics to create designs
+            that are both modern and engaging.
+          </div>
+
+          <div style="margin-top: 40px">
+            In addition to the design services, we also provide hosting
+            solutions in various major cloud providers. This means that our
+            clients can have their website hosted on a reliable and secure
+            platform, while also benefitting from our expertise in web design.
+            With a focus on quality and attention to detail, our web design
+            business is well-positioned to help clients create a strong online
+            presence and stand out in their industry.
+          </div>
+        </div>
+      </div>
+      <div class="portfolioWebPages">
+        <a
+          href="military/Index.html"
+          class="portfolioWebPage"
+          style="background-image: url('img/MilitaryWebsite.jpg')"
+        ></a>
+        <a
+          href="brewpub/index.html "
+          class="portfolioWebPage"
+          style="background-image: url('img/BlackMoonBrewing.jpg')"
+        ></a>
+        <a
+          href="sandrasSoap/index.html"
+          class="portfolioWebPage"
+          style="background-image: url('img/sandrasSoaps.jpg')"
+        ></a>
+        <a
+          href="coffeeCafe/index.html"
+          class="portfolioWebPage"
+          style="background-image: url('img/CafeWebsite.jpg')"
+        ></a>
+        <a
+          href="dakotasPlumbing/index.html"
+          class="portfolioWebPage"
+          style="background-image: url('img/plumbing.jpg')"
+        ></a>
+        <a
+          href="motorcycleStore/index.html"
+          class="portfolioWebPage"
+          style="background-image: url('img/motorcyclePage.jpg')"
+        ></a>
+
+        <div class="portfolioWebPage"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    window.onload = function () {
+      showWidthHeight();
+      window.addEventListener("resize", showWidthHeight);
+    };
+
+    function showWidthHeight() {
+      let windowInnerWidth = window.innerWidth;
+      let windowInnerHeight = window.innerHeight;
+      let elementClientWidth = document.documentElement.clientWidth;
+      let elementClientHeight = document.documentElement.clientHeight;
+      let elementOffsetWidth = document.documentElement.offsetWidth;
+      let elementOffsetHeight = document.documentElement.offsetHeight;
+      let vh = windowInnerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+      let vw = elementClientWidth * 0.01;
+      document.documentElement.style.setProperty("--vw", `${vw}px`);
+    }
+  </script>
+</html>

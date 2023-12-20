@@ -1,0 +1,240 @@
+:root {
+  --fullHeight: calc(var(--vh, 1vh) * 100);
+  --fullWidth: calc(var(--vw, 1vw) * 100);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir";
+  background-color: #f0f2f5;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(Avenir/AvenirLTStd-Roman.otf) format("opentype");
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.landing {
+  width: var(--fullWidth);
+  height: 100vh;
+  /* background-image: url(img/background_img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 1fr;
+  font-family: "Avenir";
+  position: relative;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/background_img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.logo {
+  width: 100px;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  font-size: 35px;
+  box-sizing: border-box;
+  padding: 30px;
+  align-self: center;
+  justify-self: start;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  font-size: 30px;
+  color: white;
+}
+
+.services {
+  width: 100%;
+  height: 100%;
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.service {
+  opacity: 0;
+}
+
+.phone {
+  opacity: 0;
+}
+
+.sections {
+  background-color: #f0f2f5;
+}
+
+.section {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  margin-bottom: 50px;
+  opacity: 0.5;
+}
+
+.sectionTitle {
+  font-size: 45px;
+  color: #03529f;
+  font-weight: 500;
+  justify-self: center;
+  align-self: center;
+}
+
+.sectionMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  background-color: #e0e2e5;
+  justify-self: center;
+}
+
+.sectionText {
+  width: 80%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.residential {
+  height: 500px;
+}
+.residentialPhoto {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/house.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.commercial {
+  height: 500px;
+  /* opacity: .5; */
+}
+
+.commercialPhoto {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/commercial.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.newConstruction {
+  height: 500px;
+}
+
+.newConstructionPhoto {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/industrial.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.industrial {
+  height: 500px;
+}
+
+.industrialPhoto {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/industrial.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 500px) {
+  .landing {
+    grid-template-rows: 300px 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+    grid-row: 1;
+  }
+
+  .main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .services {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .phone {
+    grid-row: 2;
+  }
+
+  .sectionMain {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 4vh;
+  }
+
+  .sectionText {
+    width: 100%;
+  }
+
+  .sectionTextWord {
+    width: 100%;
+  }
+}

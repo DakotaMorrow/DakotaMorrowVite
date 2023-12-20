@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Moon Brewing</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/7cbc2f9a60.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./css/site.css" />
+    <link rel="stylesheet" type="text/css" href="./css/landingpage.css" />
+    <link rel="stylesheet" type="text/css" href="../css/portfolio.css" />
+    <script src="../js/portfolio.js"></script>
+
+    <script defer src="../fontawesome/js/brands.js"></script>
+    <script defer src="../fontawesome/js/duotone.js"></script>
+    <script defer src="../fontawesome/js/light.js"></script>
+    <script defer src="../fontawesome/js/regular.js"></script>
+    <script defer src="../fontawesome/js/sharp-regular.js"></script>
+    <script defer src="../fontawesome/js/sharp-solid.js"></script>
+    <script defer src="../fontawesome/js/solid.js"></script>
+    <script defer src="../fontawesome/js/thin.js"></script>
+
+    <!-- Keep the FontAwesome file below. -->
+
+    <script defer src="../fontawesome/js/fontawesome.js"></script>
+</head>
+
+<body>
+    <div id="returnMessage" class="returnMessage">
+        Use Back Button to Return to Home Page
+    </div>
+    <div id="returnArrow" class="returnArrow">
+        <a href="../index.html">
+            <i id="arrowColor" class="fa-light">&#xf0e2;</i>
+        </a>
+    </div>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Menu -->
+
+    <div id="menuMobileScreenID" class="menuMobileScreen menuMobileScreenMakeInvisible">
+        <div style="
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          padding-top: 50px;
+        ">
+            <img src="img/BrewPubLogoOutlinesOrange.png" width="30%" alt="logo" />
+        </div>
+        <div style="align-self: start">
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('pageLanding')">
+                Home
+            </div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('pageLanding','happenings')">
+                Events
+            </div>
+
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('pageLanding','beerSection')">
+                Beer
+            </div>
+
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('pageLanding','foodSection')">
+                Grill
+            </div>
+            <div class="menuItemMobile" onclick="clickMobileMenuItem('pageAbout','')">
+                About
+            </div>
+        </div>
+    </div>
+
+    <div id="xMenuID" class="xMenu mobileOnly" onclick="menuXClick()">
+        <i class="fa-solid fa-x"></i>
+    </div>
+
+    <div id="hamburgerMenuID" class="hamburgerMenu mobileOnly" onclick="menuHamburgerClick()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- -------------------------------------------------------------------- -->
+    <!-- Menu -->
+
+    <div class="menuBackgroundDesktop desktopOnlyGrid">
+        <div class="menuDesktop">
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('pageLanding','landingPageDesktop')">
+                Home
+            </div>
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('pageLanding','happenings')">
+                Events
+            </div>
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('pageLanding','beerSection')">
+                Beer
+            </div>
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('pageLanding','foodSection')">
+                Grill
+            </div>
+
+            <div class="menuItemDesktop" onclick="clickDesktopMenu('pageAbout','')">
+                About
+            </div>
+            <div style="width: 50px"></div>
+        </div>
+    </div>
+
+    <!-- ================================================================================== -->
+    <!-- -------------------------------------------------------------------- -->
+
+    <div id="pageLanding" class="page">
+        <div id="landingPageDesktop" class="landingPageDesktop">
+            <div class="charcoalglass">
+                <div class="logopanel_desktop">
+                    <img src="./img/BrewPubLogoOutlinesOrange.png" class="logo_desktop" />
+                </div>
+
+                <div class="newtitleimage">
+                    <img src="./img/BrewPubLogo_Horizontal_OutlineOrange.png" width="95%" />
+                </div>
+
+                <div class="landingpagepanel">
+                    <div>
+                        <div class="infoitem">10:00 AM ~ 10:00 PM (Everyday)</div>
+                        <div class="infoitem">1234 Back Alley Boulevard</div>
+                        <div class="infoitem">321.654.1880</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pageLandingMobile" class="landingPageMobile">
+            <div class="charcoalglass">
+                <div class="logoPanelMobile">
+                    <div class="logoMobile">
+                        <img src="./img/BrewPubLogoOutlinesOrange.png" width="40%" alt="logo" />
+                    </div>
+                </div>
+
+                <div style="align-self: end; padding-bottom: 50px" class="info_mobile">
+                    <div class="infoitem_mobile">10:00 AM ~ 10:00 PM (Everyday)</div>
+                    <div class="infoitem_mobile">1234 Back Alley Boulevard</div>
+                    <div class="infoitem_mobile autolink-safari">321.654.1880</div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------ -->
+
+        <div class="infographics" style="max-width: 100%">
+            <img src="./img/infographics.png" width="100%" />
+        </div>
+
+        <!-- ------------------------------------------------------------------ -->
+
+        <div id="happenings" class="happenings">
+            <div class="eventtitle">EVENTS</div>
+            <div class="events">
+                <div class="event">
+                    <div class="calendardate">
+                        <div>OCT 22</div>
+                    </div>
+                    <div class="aboutevent">Grand Opening!</div>
+                </div>
+
+                <div class="event">
+                    <div class="calendardate">
+                        <div>OCT 31</div>
+                    </div>
+                    <div class="aboutevent">Halloween 10% off all beverages!</div>
+                </div>
+
+                <div class="event">
+                    <div class="calendardate">
+                        <div>nov 26</div>
+                    </div>
+                    <div class="aboutevent">Thanksgiving 10% off all food!</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="beerSection" class="beerSection">
+            <div style="
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 60px;
+            font-family: var(--logofont);
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            height: 200px;
+            color: var(--darkgray);
+          ">
+                <div>BEER</div>
+            </div>
+
+            <div class="beerSectionImages">
+                <div class="beerImages">
+                    <div class="beerGlass">
+                        <img class="beerGlassImage" src="img/light_beer.png" />
+                        <div>Light Beer</div>
+                    </div>
+                    <div class="beerGlass">
+                        <img class="beerGlassImage" src="img/wheat_beer.png" />
+                        <div>Wheat Beer</div>
+                    </div>
+                    <div class="beerGlass">
+                        <img class="beerGlassImage" src="img/IPA _beer.png" />
+                        <div>IPA Beer</div>
+                    </div>
+                    <div class="beerGlass">
+                        <img class="beerGlassImage" src="img/dark_beer.png" />
+                        <div>Dark Beer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------ -->
+        <!-- BEER  -->
+
+        <!-- ------------------------------------------------------------------ -->
+
+        <div id="foodSection" class="foodSection">
+            <div style="
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 60px;
+            font-family: var(--logofont);
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            height: 200px;
+          ">
+                <div>GRILL</div>
+            </div>
+
+            <div class="foodSectionItem">
+                <div><img class="foodSectionImage" src="img/hamburger.jpg" /></div>
+                <div class="foodSectionDescription foodSectionDescriptionRight">
+                    Hambugers made with quarterpound or half-pound patties. Choose toppings from grilled onions, avacado, grilled pineapple, bacon, cheese, onion rings and more.
+                </div>
+            </div>
+            <div class="foodSectionItem">
+                <div class="mobileOnly">
+                    <img class="foodSectionImage" src="img/hotdogs.jpg" />
+                </div>
+                <div class="foodSectionDescription foodSectionDescriptionLeft">
+                    Grilled hot dogs made of 100% beef, served on a fresh steamed brioche bun with your choice of toppings. Ketchup, Mustard, Onions, Relish and more.
+                </div>
+                <div class="desktopOnly">
+                    <img class="foodSectionImage" src="img/hotdogs.jpg" />
+                </div>
+            </div>
+            <div class="foodSectionItem">
+                <div><img class="foodSectionImage" src="img/ribs.jpg" /></div>
+                <div class="foodSectionDescription foodSectionDescriptionRight">
+                    Grilled Rib, 1/2 or full rack. Tender to the bone, basted in sweet and tangy bbq sauce, served with mashed potatoes and an additional side of your choice.
+                </div>
+            </div>
+            <div class="foodSectionItem">
+                <div class="mobileOnly">
+                    <img class="foodSectionImage" src="img/tacos.jpg" />
+                </div>
+                <div class="foodSectionDescription foodSectionDescriptionLeft">
+                    Classic street tacos with your choice of beef or chicken. Loaded with your choice of onions, cilantro, lime and more! Select from avacado, mild green and spicy red salsas.
+                </div>
+                <div class="desktopOnly">
+                    <img class="foodSectionImage" src="img/tacos.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pageAbout" class="page" style="display: none">
+
+        <div id="aboutPageDesktop" class="aboutPageDesktop">
+            <div class="charcoalglass">
+                <div class="logopanel_desktop">
+                    <img src="img/BrewPubLogoOutlinesOrange.png" class="logo_desktop" />
+                </div>
+
+                <div class="newtitleimage">
+                    <img src="img/BrewPubLogo_Horizontal_OutlineOrange.png" width="95%" />
+                </div>
+
+                <div class="landingpagepanel" style="font-size:20px; color:#ffffff"> Black Moon Brewing is a family owned business that was started in the early 2000s. Located in Brevard County, Florida.
+
+                </div>
+            </div>
+        </div>
+
+        <div id="aboutPageMobile" class="aboutPageMobile">
+            <div class="charcoalglass">
+                <div class="logoPanelMobile">
+                    <div class="logoMobile">
+                        <img src="img/BrewPubLogoOutlinesOrange.png" width="40%" alt="logo" />
+                    </div>
+                </div>
+                <div style="grid-row:3; justify-self:center; align-self: center; line-height: 28px;width:80%; font-size:20px; color:var(--orange)"> Black Moon Brewing is a family owned business that was started in the early 2000s. Located in Brevard County, Florida.</div>
+
+            </div>
+        </div>
+        <script type="text/javascript" src="js/site.js"></script>
+</body>
+
+</html>
